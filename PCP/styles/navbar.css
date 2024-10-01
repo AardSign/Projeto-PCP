@@ -1,0 +1,74 @@
+.nav_links {
+  box-sizing: border-box;
+  display: flex;
+  align-items: row;
+  justify-content: center;
+  margin: 0;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.945);
+}
+
+.nav_links li{
+  display: inline-block;
+  margin: 0px 0px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.nav_links a {
+  display: flex;
+  align-items:row;
+  color: rgba(255, 255, 255, 0.847);
+  text-decoration: none;
+  padding: 0px 90px;
+}
+
+.button-border {
+  border-left-width: 1px;
+  border-style: solid;
+  border-top:0px;
+  border-bottom:0px;
+  border-right-width:1px;
+  border-color: rgba(255, 255, 255, 0.847);
+  
+}
+
+.button-border-p {
+  border-left-width: 0px;
+  border-style: solid;
+  border-top:0px;
+  border-bottom:0px;
+  border-right-width:1px;
+  border-color: rgba(255, 255, 255, 0.847);
+  margin-left: 20px;
+}
+
+.button-border-g {
+  border-left-width: 0px;
+  border-style: solid;
+  border-top:0px;
+  border-bottom:0px;
+  border-right-width:1px;
+  border-color: rgba(255, 255, 255, 0.847);
+}
+
+.nav_links a:hover {
+  color: rgba(255, 0, 0, 0.745);
+  opacity: 0.8;
+  transition: 0.5s;
+}
+
+.nav_links a:hover action {
+  opacity: 0.6;
+  color: rgba(255, 0, 0, 0.745);
+  transition: 0.5s ease;
+}
+
+.icon-nav-bar {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
