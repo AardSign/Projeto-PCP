@@ -22,6 +22,16 @@
   margin-left: 30px;
  }
 
+ .holder-logo-login-register {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 65px;
+  width: 150px;
+ }
+
  .holder-logo {
   height: 65px;
   width: 150px;
@@ -42,12 +52,11 @@
  }
 
  .middle-section-login {
-  margin-left: 70px;
-  margin-right: 70px;
   max-width: 500px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
  }
 
  .search-bar {
