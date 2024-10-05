@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+.filter-container {
+  background-color: #f1f1f1;
+  padding: 20px;
+  width: 250px;
+  border-radius: 10px;
+}
+
+.filter-option {
+  margin-bottom: 15px;
+}
+
+.filter-option label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.product-list {
+  margin-top: 20px;
+}
+
+.product {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+  </style>
+</head>
+<body>
+  <div class="filter-container">
+    <h3>Filtrar Produtos</h3>
+  
+    <div class="filter-option">
+      <h4>Categorias</h4>
+      <label>
+        <input type="checkbox" value="eletronicos" onchange="filterProducts()"> Eletrônicos
+      </label>
+      <label>
+        <input type="checkbox" value="roupas" onchange="filterProducts()"> Roupas
+      </label>
+      <label>
+        <input type="checkbox" value="moveis" onchange="filterProducts()"> Móveis
+      </label>
+    </div>
+  
+    <div class="filter-option">
+      <h4>Faixa de Preço</h4>
+      <label>
+        <input type="checkbox" value="baixo" onchange="filterProducts()"> Até R$200
+      </label>
+      <label>
+        <input type="checkbox" value="medio" onchange="filterProducts()"> R$200 - R$500
+      </label>
+      <label>
+        <input type="checkbox" value="alto" onchange="filterProducts()"> Acima de R$500
+      </label>
+    </div>
+  </div>
+  
+  <div class="product-list" id="product-list">
+    <!-- Produtos serão mostrados aqui -->
+  </div>
+  
+</body>
+</html>

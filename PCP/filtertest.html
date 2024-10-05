@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style> 
+    .filter-container {
+  background-color: #f1f1f1;
+  padding: 20px;
+  width: 250px;
+  border-radius: 10px;
+}
+
+.filter-option {
+  margin-bottom: 15px;
+}
+
+.filter-option label {
+  font-weight: bold;
+}
+
+#price-range {
+  width: 100%;
+}
+
+.product-list {
+  margin-top: 20px;
+}
+
+.product {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+  </style>
+</head>
+<body>
+  <div class="filter-container">
+    <h3>Filtrar Produtos</h3>
+    <div class="filter-option">
+      <label for="category">Categoria:</label>
+      <select id="category">
+        <option value="todas">Todas</option>
+        <option value="eletronicos">Eletrônicos</option>
+        <option value="roupas">Roupas</option>
+        <option value="moveis">Móveis</option>
+      </select>
+    </div>
+  
+    <div class="filter-option">
+      <label for="price-range">Faixa de Preço:</label>
+      <input type="range" id="price-range" min="0" max="1000" value="500">
+      <span id="price-value">500</span>
+    </div>
+  </div>
+  
+  <div class="product-list">
+    <div class="product">
+      <h4>Produto 1</h4>
+      <p>Categoria: Eletrônicos</p>
+      <p>Preço: R$300</p>
+    </div>
+    <div class="product">
+      <h4>Produto 2</h4>
+      <p>Categoria: Roupas</p>
+      <p>Preço: R$150</p>
+    </div>
+    <!-- Adicione mais produtos aqui -->
+  </div>
+</body>
+</html>
+

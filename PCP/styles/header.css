@@ -151,7 +151,7 @@
   min-width: 150px;
   height: auto; 
   box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-  z-index: auto;
+  z-index: 1000;
 } 
 
 .dropdown-content li {
