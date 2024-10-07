@@ -12,56 +12,67 @@
   <link rel="stylesheet" href="styles\profilePage.css"> 
 </head>
 <body>
-  <div class="header">    
+  <header class="header">
     <div class="left-section">
-     <a href="index.html" class="holder-logo">
-       <img class="holder-logo" src="images\icons\PCPlogoED.png" alt="PC PICKER | Escolha partes. Contrua seu PC.">
-     </a>
+      <a href="index.html" class="holder-logo">
+        <img class="holder-logo" src="images/icons/PCPlogoED.png" alt="PC PICKER | Escolha partes. Construa seu PC.">
+      </a>
     </div>
     <div class="middle-section">
-     <input class="search-bar" type="text" placeholder="Pesquisar">
-     <button class="search-button"> 
-       <img src="images\icons\search.svg">
-     </button>
-  </div>
+      <input class="search-bar" type="text" placeholder="Pesquisar">
+      <button class="search-button">
+        <img src="images/icons/search.svg">
+      </button>
+    </div>
     <div class="right-section">
       <div class="login">
-       <a href="login.html" class="login-button">
-         <p>Login</p>
-         <img src="images\icons\entrance.svg" class="login-logo">
-       </a>
+        <a href="login.html" class="login-button">
+          <p>Login</p>
+          <img src="images/icons/entrance.svg" class="login-logo">
+        </a>
       </div>
       <div>
-       <a href="register.html" class="register-button">
-         <p>Cadastrar</p>
-         <img src="images\icons\user-plus.svg" class="register-logo">
-       </a>
+        <a href="register.html" class="register-button">
+          <p>Cadastrar</p>
+          <img src="images/icons/user-plus.svg" class="register-logo">
+        </a>
       </div>
     </div>
- </div>
- <div>
-   <nav>
-     <ul class="nav_links">
-         <li class="button-border"><a href="#"><img src="images\icons\tool.svg" class="icon-nav-bar">Builder</a></li>
-         <li class="button-border-p dropdown"><a href="#"><img src="images\icons\cpu.svg" class="icon-nav-bar">Produtos</a>
-           <ul class="dropdown-content">
-             <li><a href="#">Processadores <span class="icon-arrow">➔</span></a></li>
-             <li><a href="#">Placas de vídeo <span class="icon-arrow">➔</span></a></li>
-             <li><a href="#">Armazenamento <span class="icon-arrow">➔</span></a></li>
-             <li><a href="#">Placas-mãe <span class="icon-arrow">➔</span></a></li>
-             <li><a href="#">Gabinetes <span class="icon-arrow">➔</span></a></li>
-             <li><a href="#">Fontes <span class="icon-arrow">➔</span></a></li>
-             <li><a href="#">Memórias RAM <span class="icon-arrow">➔</span></a></li>
-             <li><a href="#">Coolers <span class="icon-arrow">➔</span></a></li>
-             <li><a href="#">Outros<span class="icon-arrow">➔</span></a></li>
-           </ul>
-         </li>
-         <li class="button-border-g"><a href="#"><img src="images\icons\file-text.svg" class="icon-nav-bar">Guia</a></li>
-     </ul>
-   </nav>
- </div>
+  </header>
 
- <div class="profile-page-text">
+  <nav>
+    <ul class="nav_links">
+      <li class="button-border">
+        <a href="builder.html">
+          <img src="images/icons/tool.svg" class="icon-nav-bar">Builder
+        </a>
+      </li>
+      <li class="button-border-p dropdown">
+        <a href="#">
+          <img src="images/icons/cpu.svg" class="icon-nav-bar">Produtos
+        </a>
+        <ul class="dropdown-content">
+          <li><a href="products.html">Processadores <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html">Placas de vídeo <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html">Armazenamento <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html">Placas-mãe <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html">Gabinetes <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html">Fontes <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html">Memórias RAM <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html">Coolers <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html">Outros <span class="icon-arrow">➔</span></a></li>
+        </ul>
+      </li>
+      <li class="button-border-g">
+        <a href="guide.html">
+          <img src="images/icons/file-text.svg" class="icon-nav-bar">Guia
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+ <main>
+  <div class="profile-page-text">
   <h1>Perfil</h1>
  </div>
 
@@ -105,7 +116,7 @@
     }
   }
 </script>
-
+</main>
 
 
 </body>

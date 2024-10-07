@@ -1,80 +1,92 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>PC PICKER | Escolha partes. Contrua seu PC.</title>
-    <link rel="stylesheet" href="styles\buttons.css">
-    <link rel="stylesheet" href="styles\general.css">
-    <link rel="stylesheet" href="styles\header.css">
-    <link rel="stylesheet" href="styles\text.css">
-    <link rel="stylesheet" href="styles\navbar.css">   
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PC PICKER | Escolha partes. Construa seu PC.</title>
+  <link rel="stylesheet" href="styles/buttons.css">
+  <link rel="stylesheet" href="styles/general.css">
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/text.css">
+  <link rel="stylesheet" href="styles/navbar.css">
+</head>
+<body>
 
-  <div class="header">    
-     <div class="left-section">
+  <header class="header">
+    <div class="left-section">
       <a href="index.html" class="holder-logo">
-        <img class="holder-logo" src="images\icons\PCPlogoED.png" alt="PC PICKER | Escolha partes. Contrua seu PC.">
+        <img class="holder-logo" src="images/icons/PCPlogoED.png" alt="PC PICKER | Escolha partes. Construa seu PC.">
       </a>
-     </div>
-     <div class="middle-section">
+    </div>
+    <div class="middle-section">
       <input class="search-bar" type="text" placeholder="Pesquisar">
-      <button class="search-button"> 
-        <img src="images\icons\search.svg">
+      <button class="search-button">
+        <img src="images/icons/search.svg">
       </button>
-   </div>
-     <div class="right-section">
-       <div class="login">
+    </div>
+    <div class="right-section">
+      <div class="login">
         <a href="login.html" class="login-button">
           <p>Login</p>
-          <img src="images\icons\entrance.svg" class="login-logo">
+          <img src="images/icons/entrance.svg" class="login-logo">
         </a>
-       </div>
-       <div>
+      </div>
+      <div>
         <a href="register.html" class="register-button">
           <p>Cadastrar</p>
-          <img src="images\icons\user-plus.svg" class="register-logo">
+          <img src="images/icons/user-plus.svg" class="register-logo">
         </a>
-       </div>
-     </div>
-  </div>
-  <div>
-    <nav>
-      <ul class="nav_links">
-          <li class="button-border"><a href="#"><img src="images\icons\tool.svg" class="icon-nav-bar">Builder</a></li>
-          <li class="button-border-p dropdown"><a href="#"><img src="images\icons\cpu.svg" class="icon-nav-bar">Produtos</a>
-            <ul class="dropdown-content">
-              <li><a href="#">Processadores <span class="icon-arrow">➔</span></a></li>
-              <li><a href="#">Placas de vídeo <span class="icon-arrow">➔</span></a></li>
-              <li><a href="#">Armazenamento <span class="icon-arrow">➔</span></a></li>
-              <li><a href="#">Placas-mãe <span class="icon-arrow">➔</span></a></li>
-              <li><a href="#">Gabinetes <span class="icon-arrow">➔</span></a></li>
-              <li><a href="#">Fontes <span class="icon-arrow">➔</span></a></li>
-              <li><a href="#">Memórias RAM <span class="icon-arrow">➔</span></a></li>
-              <li><a href="#">Coolers <span class="icon-arrow">➔</span></a></li>
-              <li><a href="#">Outros<span class="icon-arrow">➔</span></a></li>
-            </ul>
-          </li>
-          <li class="button-border-g"><a href="#"><img src="images\icons\file-text.svg" class="icon-nav-bar">Guia</a></li>
-      </ul>
-    </nav>
-  </div>
+      </div>
+    </div>
+  </header>
 
-    
+  <nav>
+    <ul class="nav_links">
+      <li class="button-border">
+        <a href="builder.html">
+          <img src="images/icons/tool.svg" class="icon-nav-bar">Builder
+        </a>
+      </li>
+      <li class="button-border-p dropdown">
+        <a href="#">
+          <img src="images/icons/cpu.svg" class="icon-nav-bar">Produtos
+        </a>
+        <ul class="dropdown-content">
+          <li><a href="products.html">Processadores <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html">Placas de vídeo <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html">Armazenamento <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html">Placas-mãe <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html">Gabinetes <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html">Fontes <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html">Memórias RAM <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html">Coolers <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html">Outros <span class="icon-arrow">➔</span></a></li>
+        </ul>
+      </li>
+      <li class="button-border-g">
+        <a href="guide.html">
+          <img src="images/icons/file-text.svg" class="icon-nav-bar">Guia
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <main>
     <div class="main-page-text-box">
-      <h1>
-        Escolha partes. Contrua seu PC.
-      </h1>
+      <h1>Escolha partes. Construa seu PC.</h1>
       <p>
-        Nós disponibilizamos uma plataforma para construir PC's, inspecionar peças e ajudar a facilitar o processo.
+        Nós disponibilizamos uma plataforma para construir PCs, inspecionar peças e ajudar a facilitar o processo.
       </p>
     </div>
 
     <div class="main-button-index">
-      <a href="#" class="button-text">
-        <button class="main-page-button"><img src="images\icons\tool.svg" class="icon-dimension-main-page"> MONTE SEU PC</button>
+      <a href="builder.html" class="button-text">
+        <button class="main-page-button">
+          <img src="images/icons/tool.svg" class="icon-dimension-main-page"> MONTE SEU PC
+        </button>
       </a>
     </div>
-  </body>
+  </main>
+
+</body>
 </html>

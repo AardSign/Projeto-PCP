@@ -1,68 +1,72 @@
 <!DOCTYPE html>
-
+<html lang="pt">
 <head>
   <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>PC PICKER | Realizar login</title>
-    <link rel="stylesheet" href="styles\login.css">
-    <link rel="stylesheet" href="styles\general.css">
-    <link rel="stylesheet" href="styles\header.css">
-    <link rel="stylesheet" href="styles\navbar.css"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PC PICKER | Realizar login</title>
+  <link rel="stylesheet" href="styles/login.css">
+  <link rel="stylesheet" href="styles/general.css">
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/navbar.css">
 </head>
 <body>
-  <div class="header-login">    
-    <div class="left-section">
-     <a href="index.html" class="arrow-left-icon">
-       <img class="arrow-left-icon" src="images\icons\arrow-left white.svg" alt="PC PICKER | Escolha partes. Contrua seu PC.">
-     </a>
-    </div>
-    <div class="middle-section-login">
-      <a href="index.html">
-        <img class="holder-logo-login-register" src="images\icons\PCPlogoED.png" alt="PC PICKER | Escolha partes. Contrua seu PC.">
-      </a>
-  </div>
-  <div class="right-section"></div>
-</div>
-  
 
-
-<div class="login-page-text-box">
-        <h1> Entre na sua conta</h1>
-</div>
-      
-<div class="card">
-  <div class="shadow-box-login">
-  <div class="wrapper">
-  <form action="">
-    <h1>Login</h1>
-    <div class="line-between-2"></div>
-    <div class="input-box">
-      <input class="text-box-login-password" type="text" placeholder="Nome de usuário" required>
+  <header>
+    <div class="header-login">
+      <div class="left-section">
+        <a href="index.html" class="arrow-left-icon">
+          <img class="arrow-left-icon" src="images/icons/arrow-left white.svg" alt="PC PICKER | Escolha partes. Construa seu PC.">
+        </a>
+      </div>
+      <div class="middle-section-login">
+        <a href="index.html">
+          <img class="holder-logo-login-register" src="images/icons/PCPlogoED.png" alt="PC PICKER | Escolha partes. Construa seu PC.">
+        </a>
+      </div>
+      <div class="right-section"></div>
     </div>
-    <div class="input-box">
-          <input class="text-box-login-password" type="password" placeholder="Senha" required>
+  </header>
+
+  <main>
+    <div class="login-page-text-box">
+      <h1>Entre na sua conta</h1>
     </div>
 
-    <div class="button-forgot">
-      <button  class="login-register-button" type="submit">Login</button>
-      <div class="line-between"></div>
-      <a href="#" class="forgoten-pass" >Esqueceu a senha?</a>
+    <div class="card">
+      <div class="shadow-box-login">
+        <div class="wrapper">
+          <form action="">
+            <h1>Login</h1>
+            <div class="line-between-2"></div>
+
+            <div class="input-box">
+              <input class="text-box-login-password" type="text" placeholder="Nome de usuário" required>
+            </div>
+
+            <div class="input-box">
+              <input class="text-box-login-password" type="password" placeholder="Senha" required>
+            </div>
+
+            <div class="button-forgot">
+              <button class="login-register-button" type="submit">Login</button>
+              <div class="line-between"></div>
+              <a href="#" class="forgoten-pass">Esqueceu a senha?</a>
+            </div>
+
+            <div class="register-link">
+              <p>Não tem conta?</p>
+            </div>
+
+            <div class="line-between-3"></div>
+
+            <div>
+              <button onclick="window.location.href='register.html'" class="register-redirect-btn">Registrar-se</button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
+  </main>
 
-
-    <div class="register-link">
-      <p>Não tem conta?</p>
-    </div>
-    <div class="line-between-3"></div>
-    <div>
-      <button href="register.html" class="register-redirect-btn">Registrar-se</button>
-    </div>
-  
-
-
-  </form>
-  </div>
-  </div>
-</div>
 </body>
 </html>
