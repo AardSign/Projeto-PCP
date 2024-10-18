@@ -23,7 +23,7 @@ import {
     getComponentsByType,
     getComponentById,
     searchComponent,
-} from '../controllers/componentController.js'; // Certifique-se de que este arquivo exista
+} from '../controllers/componentController.js'; 
 
 const router = express.Router();
 
