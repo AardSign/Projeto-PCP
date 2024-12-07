@@ -19,12 +19,16 @@
       </a>
     </div>
     <div class="middle-section">
-      <input class="search-bar" type="text" placeholder="Pesquisar">
+      <div div style="position: relative;">
+        <input class="search-bar" type="text" placeholder="Pesquisar">
+        <div class="search-results"></div>
+      </div>
       <button class="search-button">
         <img src="images/icons/search.svg">
       </button>
     </div>
-    <div class="right-section">
+    <div class="right-section" id="user-actions">
+      <!-- Este conteúdo será atualizado dinamicamente pelo script header.js -->
       <div class="login">
         <a href="login.html" class="login-button">
           <p>Login</p>
@@ -52,15 +56,15 @@
           <img src="images/icons/cpu.svg" class="icon-nav-bar">Produtos
         </a>
         <ul class="dropdown-content">
-          <li><a href="products.html">Processadores <span class="icon-arrow">➔</span></a></li>
-          <li><a href="products.html">Placas de vídeo <span class="icon-arrow">➔</span></a></li>
-          <li><a href="products.html">Armazenamento <span class="icon-arrow">➔</span></a></li>
-          <li><a href="products.html">Placas-mãe <span class="icon-arrow">➔</span></a></li>
-          <li><a href="products.html">Gabinetes <span class="icon-arrow">➔</span></a></li>
-          <li><a href="products.html">Fontes <span class="icon-arrow">➔</span></a></li>
-          <li><a href="products.html">Memórias RAM <span class="icon-arrow">➔</span></a></li>
-          <li><a href="products.html">Coolers <span class="icon-arrow">➔</span></a></li>
-          <li><a href="products.html">Outros <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=cpus_detailed">Processadores <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=gpus_detailed">Placas de vídeo <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=storage_detailed">Armazenamento <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=motherboards_detailed">Placas-mãe <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=cases_detailed">Gabinetes <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=power_supplies_detailed">Fontes <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=memory_detailed">Memórias RAM <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=cpu_coolers_detailed">Coolers <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=outros">Outros <span class="icon-arrow">➔</span></a></li>
         </ul>
       </li>
       <li class="button-border-g">
@@ -87,6 +91,7 @@
       </a>
     </div>
   </main>
-
+  
+  <script src="scripts/header.js" defer></script>
 </body>
 </html>

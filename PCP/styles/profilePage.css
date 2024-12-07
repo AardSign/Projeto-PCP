@@ -39,3 +39,454 @@
   border-radius: 15px;
   border:1px solid black;
 }
+
+/* Estilo geral da página */
+.profile-page {
+  display: flex;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+/* Sidebar */
+.sidebar {
+  flex: 0 0 250px;
+  background-color: #000000;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar .menu {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar .menu li {
+  margin-bottom: 10px;
+}
+
+.sidebar .menu li a {
+  text-decoration: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color:rgba(255, 255, 255, 0.847);
+  color: #e7e7e7;
+  padding: 10px 15px;
+  display: block;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.sidebar .menu li a:hover {
+  background-color: rgba(255, 0, 0, 0.747);
+  color: white;
+}
+
+/* Conteúdo principal */
+.content {
+  flex: 1;
+  background-color: #000000;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.content-container {
+  text-align: center;
+}
+
+.card {
+  background-color: rgb(17, 16, 16);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border: 1px solid #000000;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.card h2 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color:rgba(255, 255, 255, 0.847);
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  color:rgba(255, 255, 255, 0.847);
+  line-height: 1.5;
+}
+
+.card ul{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  color:rgba(255, 255, 255, 0.847);
+  line-height: 1.5;
+}
+
+.favorite-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.favorite-link {
+  text-decoration: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  color: #ffffff;
+  font-weight: bold;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.favorite-link:hover {
+  color: rgba(255, 0, 0, 0.747);
+  text-decoration: underline;
+}
+
+.edit-form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.edit-form input {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 20px 20px;
+}
+
+
+
+  .profile-form-container {
+    margin: 20px 0;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .favorites-container,
+  .builds-container {
+    margin-top: 20px;
+  }
+  
+  .favorites-grid,
+  .builds-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .build-content {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+
+
+
+
+
+
+
+
+
+
+  /* Adiciona espaço entre a navbar e as seções */
+main {
+  margin-top: 20px; /* Espaço entre a navbar e as seções */
+}
+
+/* Estilo para os containers */
+.container {
+  background-color: #000; /* Fundo preto */
+  color: #fff; /* Texto branco */
+  padding: 20px; /* Espaçamento interno */
+  margin-bottom: 20px; /* Espaçamento entre os containers */
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Sombra mais forte */
+}
+
+/* Ajuste nos títulos das seções */
+.section h2 {
+  margin-top: 0; /* Remove margem superior */
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+}
+
+/* Organiza os elementos em coluna e adiciona mais espaçamento */
+.section {
+  display: flex;
+  flex-direction: column;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  gap: 25px; /* Aumenta o espaço entre os pares label + input */
+}
+
+/* Para cada conjunto de label e input */
+.section label {
+  display: block; /* Garante que o label fique em uma linha separada */
+  margin-bottom: 5px; /* Espaçamento entre o label e o input */
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.section input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 100%; /* Ocupa toda a largura disponível */
+}
+
+
+
+
+.btn-btn-save{
+  background-color:rgba(97,171,147,255);
+  color:white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 16px;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  cursor:pointer;
+  transition: opacity 0.20s;
+  }
+
+  .btn-btn-save:hover{
+    opacity:0.8;
+      }
+    
+    .btn-btn-save:active{
+    opacity:0.6;
+      }
+
+      .btn-btn-delete{
+        background-color:inherit;
+        color:grey;
+        border-color: rgb(113, 113, 132);
+        border-style: solid;
+        border-width:2.5px;
+        border-radius: 4px;
+        font-weight: bold;
+        font-size: 14px;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        cursor:pointer;
+        transition: background-color 0.20s, color 0.20s, opacity 0.20s;
+        }
+      
+        .btn-btn-delete:hover{
+        background-color:rgb(113, 113, 132);
+        color:white;
+        opacity: 0.8;
+        }
+      
+        .btn-btn-delete:active{
+          opacity: 0.6;
+        }
+        
+        #favoritos.section div{
+          display: flex;
+          align-items: flex-start;
+          padding: 10px 10px;
+          
+        }
+
+        .favorite-item{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          border-right: #f9f9f9;
+          border-width: 1px;
+          border-style: solid;
+        }
+
+        .remove-favorite-button{
+          align-items: center;
+        }
+
+        .remove-favorite-button{
+          background-color:rgba(229,56,30,255);
+          color:white;
+          border: none;
+          border-radius: 4px;
+          font-weight: 400;
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          font-size: 14px;
+          padding-block-end: 5px;
+          padding-block-start: 5px;
+          padding-inline-end: 10px;
+          padding-inline-start: 10px;
+          padding-left: 10px;
+          padding-right: 10px;
+          padding-top: 5px;
+          padding-bottom: 5px;
+          cursor:pointer;
+          transition: opacity 0.20s;
+          }
+        
+          .remove-favorite-button:hover{
+          opacity: 0.8;
+        }
+        
+        .remove-favorite-button:active{
+          opacity: 0.6;
+        }
+
+/* Container principal das builds */
+#builds-list {
+  display: flex;
+  flex-wrap: wrap; /* Permite que as builds quebrem linha, se necessário */
+  gap: 10px; /* Espaçamento entre as builds */
+  justify-content: flex-start; /* Alinha as builds à esquerda */
+}
+
+/* Estilo para cada build */
+.build-item h3 p{
+  color: white;
+  flex: 1 1 calc(30% - 10px); /* Cada build ocupa aproximadamente 30% da largura do contêiner */
+  display: flex;
+  flex-direction: column; /* Organiza o conteúdo verticalmente */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #000000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.build-info h3{
+  color: white;
+ }
+
+ .build-info p{
+  color: white;
+ }
+
+.build-content{
+  background-color: #201d1d;
+}
+
+ 
+
+
+/* Informações da build */
+.build-info {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Título da build */
+.build-info h3 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+.delete-build-button:hover {
+  background-color: #e60000;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .build-item {
+    flex: 1 1 calc(100% - 10px); /* Cada build ocupa 100% da largura em telas menores */
+  }
+}
+
+
+.delete-build-button{
+  background-color:rgba(229,56,30,255);
+  color:white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 14px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  padding-block-end: 5px;
+  padding-block-start: 5px;
+  padding-inline-end: 10px;
+  padding-inline-start: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  cursor:pointer;
+  transition: opacity 0.20s;
+  }
+
+.delete-build-button:hover{
+  opacity: 0.8;
+}
+
+.delete-build-button:active{
+  opacity: 0.6;
+}
+

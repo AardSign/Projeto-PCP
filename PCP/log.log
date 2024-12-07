@@ -1,0 +1,16 @@
+2024-12-03 13:49:27 - DEBUG - Isso é uma mensagem de depuração
+2024-12-03 13:49:27 - INFO - Informação importante
+2024-12-03 13:49:27 - WARNING - Atenção: algo pode estar errado
+2024-12-03 13:49:27 - ERROR - Erro encontrado!
+2024-12-03 13:49:27 - CRITICAL - Erro crítico!
+2024-12-03 13:50:46 - ERROR - Ocorreu um erro!
+Traceback (most recent call last):
+  File "c:\Users\Emanu\OneDrive\Desktop\PCP\Projeto-PCP\PCP\Logging\log.py", line 11, in <module>
+    x = 1 / 0  # Gera um erro
+        ~~^~~
+ZeroDivisionError: division by zero
+2024-12-03 13:50:46 - DEBUG - Isso é uma mensagem de depuração
+2024-12-03 13:50:46 - INFO - Informação importante
+2024-12-03 13:50:46 - WARNING - Atenção: algo pode estar errado
+2024-12-03 13:50:46 - ERROR - Erro encontrado!
+2024-12-03 13:50:46 - CRITICAL - Erro crítico!

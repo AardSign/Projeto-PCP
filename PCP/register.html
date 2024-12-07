@@ -33,21 +33,21 @@
     <section class="card">
       <div class="shadow-box-register">
         <div class="wrapper-register">
-          <form action="">
+          <form id="register-form">
             <h1>Registro</h1>
             <div class="line-between-2"></div>
 
             <div class="input-box-register">
-              <input class="text-box-login-password" type="text" placeholder="Nome de usuário" required>
+              <input id="register-username" class="text-box-login-password" type="text" name="username" placeholder="Nome de usuário" required>
             </div>
             <div class="input-box-register">
-              <input class="text-box-login-password" type="text" placeholder="E-Mail" required>
+              <input id="register-email" class="text-box-login-password" type="text" name="email" placeholder="E-Mail" required>
             </div>
             <div class="input-box-register">
-              <input class="text-box-login-password" type="password" placeholder="Senha" required>
+              <input id="register-password" class="text-box-login-password" type="password" name="password" placeholder="Senha" required>
             </div>
             <div class="input-box-register">
-              <input class="text-box-login-password" type="password" placeholder="Confirme a Senha" required>
+              <input id="register-confirm-password" class="text-box-login-password" type="password" name="confirm-password" placeholder="Confirme a Senha" required>
             </div>
 
             <div class="button-forgot">
@@ -67,6 +67,8 @@
       </div>
     </section>
   </main>
+  <script src="scripts/register.js"></script>
+  <script src="scripts/header.js" defer></script>
 
 </body>
 </html>

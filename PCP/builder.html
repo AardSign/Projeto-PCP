@@ -16,12 +16,16 @@
       </a>
     </div>
     <div class="middle-section">
-      <input class="search-bar" type="text" placeholder="Pesquisar">
+      <div div style="position: relative;">
+        <input class="search-bar" type="text" placeholder="Pesquisar">
+        <div class="search-results"></div>
+      </div>
       <button class="search-button">
         <img src="images/icons/search.svg">
       </button>
     </div>
-    <div class="right-section">
+    <div class="right-section" id="user-actions">
+      <!-- Este conteúdo será atualizado dinamicamente pelo script header.js -->
       <div class="login">
         <a href="login.html" class="login-button">
           <p>Login</p>
@@ -49,15 +53,15 @@
           <img src="images/icons/cpu.svg" class="icon-nav-bar">Produtos
         </a>
         <ul class="dropdown-content">
-          <li><a href="products.html">Processadores <span class="icon-arrow">➔</span></a></li>
-          <li><a href="products.html">Placas de vídeo <span class="icon-arrow">➔</span></a></li>
-          <li><a href="products.html">Armazenamento <span class="icon-arrow">➔</span></a></li>
-          <li><a href="products.html">Placas-mãe <span class="icon-arrow">➔</span></a></li>
-          <li><a href="products.html">Gabinetes <span class="icon-arrow">➔</span></a></li>
-          <li><a href="products.html">Fontes <span class="icon-arrow">➔</span></a></li>
-          <li><a href="products.html">Memórias RAM <span class="icon-arrow">➔</span></a></li>
-          <li><a href="products.html">Coolers <span class="icon-arrow">➔</span></a></li>
-          <li><a href="products.html">Outros <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=cpus_detailed">Processadores <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=gpus_detailed">Placas de vídeo <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=storage_detailed">Armazenamento <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=motherboards_detailed">Placas-mãe <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=cases_detailed">Gabinetes <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=power_supplies_detailed">Fontes <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=memory_detailed">Memórias RAM <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=cpu_coolers_detailed">Coolers <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=outros">Outros <span class="icon-arrow">➔</span></a></li>
         </ul>
       </li>
       <li class="button-border-g">
@@ -92,227 +96,119 @@
       </tr>
       </thead>
       <tbody>         
-       <tr class="tr-product">
-        <td>
-          <a href="#">Processador</a>
-        </td>
-        <td class="empty"> </td>
-        <td class="add-component"> 
-          <a href="#">
-            <button class="add-component-button">
-              <img src="images\icons\plus.svg" class="plus-sign">
-              Adicionar componente
+        <tr class="tr-product">
+          <td>
+            <a href="products.html?category=cpus_detailed">Processador</a>
+          </td>
+          <td class="empty"> </td>
+          <td class="add-component">
+            <button class="add-component-button" data-type="cpu">
+              <img src="images/icons/plus.svg" class="plus-sign" alt="Adicionar"> Adicionar componente
             </button>
-           </a>
-        </td>
-       </tr>
-       <tr class="tr-product">
-        <td>
-          <a href="#">Cooler</a>
-        </td>
-        <td class="empty"> </td>
-        <td class="add-component"> 
-          <a href="#">
-            <button class="add-component-button">
-              <img src="images\icons\plus.svg" class="plus-sign">
-              Adicionar componente
+          </td>
+          
+        </tr>
+        <tr class="tr-product">
+          <td>
+            <a href="products.html?category=cpu_coolers_detailed">Cooler</a>
+          </td>
+          <td class="empty"> </td>
+          <td class="add-component">
+            <button class="add-component-button" data-type="cooler">
+              <img src="images/icons/plus.svg" class="plus-sign" alt="Adicionar"> Adicionar componente
             </button>
-           </a>
-        </td>
-       </tr>
-       <tr class="tr-product">
-        <td>
-          <a href="#">Placa-mãe</a>
-        </td>
-        <td class="empty"> </td>
-        <td class="add-component"> 
-          <a href="#">
-            <button class="add-component-button">
-              <img src="images\icons\plus.svg" class="plus-sign">
-              Adicionar componente
+          </td>
+        </tr>
+        <tr class="tr-product">
+          <td>
+            <a href="products.html?category=motherboards_detailed">Placa-mãe</a>
+          </td>
+          <td class="empty"> </td>
+          <td class="add-component">
+            <button class="add-component-button" data-type="motherboard">
+              <img src="images/icons/plus.svg" class="plus-sign" alt="Adicionar"> Adicionar componente
             </button>
-           </a>
-        </td>
-       </tr>
-       <tr class="tr-product">
-        <td>
-          <a href="#">Memória RAM</a>
-        </td>
-        <td class="empty"> </td>
-        <td class="add-component"> 
-          <a href="#">
-            <button class="add-component-button">
-              <img src="images\icons\plus.svg" class="plus-sign">
-              Adicionar componente
+          </td>
+        </tr>
+        <tr class="tr-product">
+          <td>
+            <a href="products.html?category=gpus_detailed">Placa de Vídeo</a>
+          </td>
+          <td class="empty"> </td>
+          <td class="add-component">
+            <button class="add-component-button" data-type="gpu">
+              <img src="images/icons/plus.svg" class="plus-sign" alt="Adicionar"> Adicionar componente
             </button>
-           </a>
-        </td>
-       </tr>
-       <tr class="tr-product">
-        <td>
-          <a href="#">Armazenamento</a>
-        </td>
-        <td class="empty"> </td>
-        <td class="add-component"> 
-          <a href="#">
-            <button class="add-component-button">
-              <img src="images\icons\plus.svg" class="plus-sign">
-              Adicionar componente
+          </td>
+        </tr>
+        <tr class="tr-product">
+          <td>
+            <a href="products.html?category=memory_detailed">Memórias RAM</a>
+          </td>
+          <td class="empty"> </td>
+          <td class="add-component">
+            <button class="add-component-button" data-type="memory">
+              <img src="images/icons/plus.svg" class="plus-sign" alt="Adicionar"> Adicionar componente
             </button>
-           </a>
-        </td>
-       </tr>
-       <tr class="tr-product">
-        <td>
-          <a href="#">Placa de vídeo</a>
-        </td>
-        <td class="empty"> </td>
-        <td class="add-component"> 
-          <a href="#">
-            <button class="add-component-button">
-              <img src="images\icons\plus.svg" class="plus-sign">
-              Adicionar componente
+          </td>
+        </tr>
+        <tr class="tr-product">
+          <td>
+            <a href="products.html?category=storage_detailed">Armazenamento</a>
+          </td>
+          <td class="empty"> </td>
+          <td class="add-component">
+            <button class="add-component-button" data-type="storage">
+              <img src="images/icons/plus.svg" class="plus-sign" alt="Adicionar"> Adicionar componente
             </button>
-           </a>
-        </td>
-       </tr>
-       <tr class="tr-product">
-        <td>
-          <a href="#">Gabinete</a>
-        </td>
-        <td class="empty"> </td>
-        <td class="add-component"> 
-          <a href="#">
-            <button class="add-component-button">
-              <img src="images\icons\plus.svg" class="plus-sign">
-              Adicionar componente
+        </tr>
+        <tr class="tr-product">
+          <td>
+            <a href="products.html?category=cases_detailed">Gabinete</a>
+          </td>
+          <td class="empty"> </td>
+          <td class="add-component">
+            <button class="add-component-button" data-type="case">
+              <img src="images/icons/plus.svg" class="plus-sign" alt="Adicionar"> Adicionar componente
             </button>
-           </a>
-        </td>
-       </tr>
-       <tr class="tr-product">
-        <td>
-          <a href="#">Fonte</a>
-        </td>
-        <td class="empty"> </td>
-        <td class="add-component"> 
-          <a href="#">
-            <button class="add-component-button">
-              <img src="images\icons\plus.svg" class="plus-sign">
-              Adicionar componente
+          </td>
+        </tr>
+        <tr class="tr-product">
+          <td>
+            <a href="products.html?category=power_supplies_detailed">Fonte</a>
+          </td>
+          <td class="empty"> </td>
+          <td class="add-component">
+            <button class="add-component-button" data-type="psu">
+              <img src="images/icons/plus.svg" class="plus-sign" alt="Adicionar"> Adicionar componente
             </button>
-           </a>
-        </td>
-       </tr>
-       <tr class="tr-product">
-        <td>
-          <a href="#">Sistema Operacional</a>
-        </td>
-        <td class="empty"> </td>
-        <td class="add-component"> 
-          <a href="#">
-            <button class="add-component-button">
-              <img src="images\icons\plus.svg" class="plus-sign">
-              Adicionar componente
-            </button>
-           </a>
-        </td>
-       </tr>
-       <tr class="tr-product">
-        <td>
-          <a href="#">Monitor</a>
-        </td>
-        <td class="empty"> </td>
-        <td class="add-component"> 
-          <a href="#">
-            <button class="add-component-button">
-              <img src="images\icons\plus.svg" class="plus-sign">
-              Adicionar componente
-            </button>
-           </a>
-        </td>
-       </tr>
-
-       <tr class>
-        <td class="td-component">
-          <p>Placas de expansão / Networking</p>
-        </td>
-        <td class="empty"></td>
-        <td class="add-component-non-btn">
-          <a href="#"> 
-            Placas de som,
-          </a>
-          <a href="#">
-             Placas de rede,
-          </a>
-          <a href="#">
-            Adaptadores de rede
-          </a>
-        </td>
-       </tr>
-
-       <tr class>
-        <td class="td-component">
-          <p>Periféricos</p>
-        </td>
-        <td class="empty"></td>
-        <td class="add-component-non-btn">
-          <a href="#"> 
-            Headphone,
-          </a>
-          <a href="#">
-             Teclado,
-          </a>
-          <a href="#">
-            Mouse,
-          </a>
-          <a href="#">
-            Webcam,
-          </a>
-          <a href="#">
-            Alto falante
-          </a>
-        </td>
-       </tr>
-
-       <tr class>
-        <td class="td-component">
-          <p>Acessorios / Outros</p>
-        </td>
-        <td class="empty"></td>
-        <td class="add-component-non-btn">
-          <a href="#"> 
-            Acessorios de gabinete,
-          </a>
-          <a href="#">
-             Ventoinhas,
-          </a>
-          <a href="#">
-            Controle de ventoinhas,
-          </a>
-          <a href="#">
-            Pasta Térmica,
-          </a>
-          <a href="#">
-            Armazenamento externo,
-          </a>
-          <a href="#">
-            Leitores de disco,
-          </a>
-          <a href="#">
-            FAI(Fonte de alimentação ininterrupta)
-          </a>
-        </td>
-       </tr>
-  
+          </td>
+        </tr>
       </tbody>
+      
+      
       </table>
+      
     </div>
+    
   </div>
+  <div class="save-build-container">
+    <button id="save-build-button" class="save-build-button">
+      <img src="images/icons/save.svg" alt="Salvar Build" class="save-icon">
+      Salvar Build
+    </button>
+  </div>
+  
 
- </div>
+
+ 
+
+</div>
+
 </section>
 </main>
+<script src="scripts/builder.js"></script>
+<script src="scripts/header.js" defer></script>
 
 </body>
 </html>

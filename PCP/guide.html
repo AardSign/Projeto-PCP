@@ -21,12 +21,16 @@
       </a>
     </div>
     <div class="middle-section">
-      <input class="search-bar" type="text" placeholder="Pesquisar">
+      <div div style="position: relative;">
+        <input class="search-bar" type="text" placeholder="Pesquisar">
+        <div class="search-results"></div>
+      </div>
       <button class="search-button">
         <img src="images/icons/search.svg">
       </button>
     </div>
-    <div class="right-section">
+    <div class="right-section" id="user-actions">
+      <!-- Este conteúdo será atualizado dinamicamente pelo script header.js -->
       <div class="login">
         <a href="login.html" class="login-button">
           <p>Login</p>
@@ -54,15 +58,15 @@
           <img src="images/icons/cpu.svg" class="icon-nav-bar">Produtos
         </a>
         <ul class="dropdown-content">
-          <li><a href="products.html">Processadores <span class="icon-arrow">➔</span></a></li>
-          <li><a href="products.html">Placas de vídeo <span class="icon-arrow">➔</span></a></li>
-          <li><a href="products.html">Armazenamento <span class="icon-arrow">➔</span></a></li>
-          <li><a href="products.html">Placas-mãe <span class="icon-arrow">➔</span></a></li>
-          <li><a href="products.html">Gabinetes <span class="icon-arrow">➔</span></a></li>
-          <li><a href="products.html">Fontes <span class="icon-arrow">➔</span></a></li>
-          <li><a href="products.html">Memórias RAM <span class="icon-arrow">➔</span></a></li>
-          <li><a href="products.html">Coolers <span class="icon-arrow">➔</span></a></li>
-          <li><a href="products.html">Outros <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=cpus_detailed">Processadores <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=gpus_detailed">Placas de vídeo <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=storage_detailed">Armazenamento <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=motherboards_detailed">Placas-mãe <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=cases_detailed">Gabinetes <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=power_supplies_detailed">Fontes <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=memory_detailed">Memórias RAM <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=cpu_coolers_detailed">Coolers <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=outros">Outros <span class="icon-arrow">➔</span></a></li>
         </ul>
       </li>
       <li class="button-border-g">
@@ -89,49 +93,49 @@
                     <div class="part-guide-text">
                         <h2>Placa-mãe</h2>
                         <p>A placa-mãe é a peça central onde todos os outros componentes se conectam. Ela define quais processadores, memórias e outros dispositivos são compatíveis com o sistema. É importante verificar a compatibilidade de todos os componentes com a placa-mãe antes de comprá-los.</p>
-                        <a href="#">Lista de Placas-mãe</a>  
+                        <a href="products.html?category=motherboards_detailed">Lista de Placas-mãe</a>  
                     </div>
 
                     <div class="part-guide-text">
                         <h2>Processador (CPU)</h2>
                         <p>O processador é o cérebro do computador. Ele realiza os cálculos necessários para a execução dos programas. A escolha do processador dependerá do uso pretendido. Processadores de alto desempenho são recomendados para jogos e edição de vídeo, enquanto modelos intermediários podem ser suficientes para tarefas cotidianas.</p>
-                        <a href="#">Lista de Processadores</a> 
+                        <a href="products.html?category=cpus_detailed">Lista de Processadores</a> 
                     </div>
 
                     <div class="part-guide-text">
                         <h2>Memória RAM</h2>
                         <p>A memória RAM é o local onde o computador armazena dados temporários para acesso rápido. Quanto maior a capacidade de RAM, mais tarefas o computador poderá executar simultaneamente sem perder desempenho.</p>
-                        <a href="#">Lista de Memórias-RAM</a> 
+                        <a href="products.html?category=memory_detailed">Lista de Memórias-RAM</a> 
                     </div>
 
                     <div class="part-guide-text">
                         <h2>Armazenamento (HD ou SSD)</h2>
                         <p>O disco rígido (HD) ou a unidade de estado sólido (SSD) são os dispositivos responsáveis por armazenar o sistema operacional, programas e arquivos. Os SSDs são mais rápidos, mas os HDs costumam oferecer mais espaço a um preço menor. Muitas pessoas optam por combinar ambos: SSD para o sistema e programas, e HD para arquivos maiores.</p>
-                        <a href="#">Lista de SSDs e HD</a> 
+                        <a href="products.html?category=storage_detailed">Lista de SSDs e HD</a> 
                     </div>
 
                     <div class="part-guide-text">
                         <h2>Placa de vídeo (GPU)</h2>
                         <p>A placa de vídeo é responsável por processar e gerar as imagens exibidas no monitor. É um componente crucial para quem utiliza o computador para jogos ou trabalhos gráficos intensos, como modelagem 3D e edição de vídeos.</p>
-                        <a href="#">Lista de Placas de vídeo</a> 
+                        <a href="products.html?category=gpus_detailed">Lista de Placas de vídeo</a> 
                     </div>
 
                     <div class="part-guide-text">
                         <h2>Fonte de alimentação (PSU)</h2>
                         <p>A fonte de alimentação converte a energia da tomada em energia utilizável pelos componentes internos do computador. É importante escolher uma fonte de alimentação que forneça potência suficiente para todos os componentes, com alguma margem de segurança.</p>
-                        <a href="#">Lista de Fontes</a> 
+                        <a href="products.html?category=power_supplies_detailed">Lista de Fontes</a> 
                     </div>
 
                     <div class="part-guide-text">
                         <h2>Gabinete</h2>
                         <p>O gabinete é a carcaça que abriga todos os componentes do computador. Além de estética, o gabinete deve fornecer uma boa ventilação para manter o sistema refrigerado e suportar as dimensões da placa-mãe e outros componentes.</p>
-                        <a href="#">Lista de Gabinetes</a> 
+                        <a href="products.html?category=cases_detailed">Lista de Gabinetes</a> 
                     </div>
 
                     <div class="part-guide-text">
                         <h2>Coolers e sistema de refrigeração</h2>
                         <p>Manter o computador em temperaturas adequadas é essencial para seu funcionamento estável. Além do cooler do processador, pode ser necessário adicionar ventoinhas extras ou até sistemas de refrigeração líquida para manter temperaturas seguras, especialmente em computadores de alto desempenho.</p>
-                        <a href="#">Lista de Coolers</a> 
+                        <a href="products.html?category=cpu_coolers_detailed">Lista de Coolers</a> 
                     </div>
 
                     <div class="part-guide-text">
@@ -178,6 +182,8 @@
         </div>
     </div>
    </section>
-  </main>  
+  </main>
+  <script src="scripts/header.js" defer></script>
 </body>
+
 </html>

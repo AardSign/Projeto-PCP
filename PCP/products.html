@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PC PICKER | Lista de produtos</title>
-  <link rel="stylesheet" href="styles\buttons.css">
-  <link rel="stylesheet" href="styles\general.css">
-  <link rel="stylesheet" href="styles\header.css">
-  <link rel="stylesheet" href="styles\text.css">
-  <link rel="stylesheet" href="styles\navbar.css">
-  <link rel="stylesheet" href="styles\builder.css">
-  <link rel="stylesheet" href="styles\products.css">
+  <link rel="stylesheet" href="styles/buttons.css">
+  <link rel="stylesheet" href="styles/general.css">
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/text.css">
+  <link rel="stylesheet" href="styles/navbar.css">
+  <link rel="stylesheet" href="styles/builder.css">
+  <link rel="stylesheet" href="styles/products.css">
 </head>
 <body>
 
@@ -21,12 +21,16 @@
       </a>
     </div>
     <div class="middle-section">
-      <input class="search-bar" type="text" placeholder="Pesquisar">
+      <div div style="position: relative;">
+        <input class="search-bar" type="text" placeholder="Pesquisar">
+        <div class="search-results"></div>
+      </div>
       <button class="search-button">
         <img src="images/icons/search.svg">
       </button>
     </div>
-    <div class="right-section">
+    <div class="right-section" id="user-actions">
+      <!-- Este conteúdo será atualizado dinamicamente pelo script header.js -->
       <div class="login">
         <a href="login.html" class="login-button">
           <p>Login</p>
@@ -54,15 +58,15 @@
           <img src="images/icons/cpu.svg" class="icon-nav-bar">Produtos
         </a>
         <ul class="dropdown-content">
-          <li><a href="products.html">Processadores <span class="icon-arrow">➔</span></a></li>
-          <li><a href="products.html">Placas de vídeo <span class="icon-arrow">➔</span></a></li>
-          <li><a href="products.html">Armazenamento <span class="icon-arrow">➔</span></a></li>
-          <li><a href="products.html">Placas-mãe <span class="icon-arrow">➔</span></a></li>
-          <li><a href="products.html">Gabinetes <span class="icon-arrow">➔</span></a></li>
-          <li><a href="products.html">Fontes <span class="icon-arrow">➔</span></a></li>
-          <li><a href="products.html">Memórias RAM <span class="icon-arrow">➔</span></a></li>
-          <li><a href="products.html">Coolers <span class="icon-arrow">➔</span></a></li>
-          <li><a href="products.html">Outros <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=cpus_detailed">Processadores <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=gpus_detailed">Placas de vídeo <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=storage_detailed">Armazenamento <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=motherboards_detailed">Placas-mãe <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=cases_detailed">Gabinetes <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=power_supplies_detailed">Fontes <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=memory_detailed">Memórias RAM <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=cpu_coolers_detailed">Coolers <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=outros">Outros <span class="icon-arrow">➔</span></a></li>
         </ul>
       </li>
       <li class="button-border-g">
@@ -73,207 +77,47 @@
     </ul>
   </nav>
 
-<main>
-
- <div class="main-page-text-box__b">
-    <h1>
-      Escolha Peça
-    </h1>
- </div>
-
-<section>
-<div class="products-parts-container">
-  <div class="parts-holder-products">  
-    <div class="filter-bar">
-      <h2>Filtro</h2>
-      
-      <div class="filter-option">
-        <h4>Filter slot 1</h4>
-        <label>
-          <input type="checkbox" value="Option 1"> Option 1
-        </label>
-        <label>
-          <input type="checkbox" value="Option 2"> Option 2
-        </label>
-        <label>
-          <input type="checkbox" value="Option 3"> Option 3
-        </label>
-      </div>  
-       
-      <div class="filter-option">
-        <h4>Filter slot 2</h4>
-        <label>
-          <input type="checkbox" value="Option 1"> Option 1
-        </label>
-        <label>
-          <input type="checkbox" value="Option 2"> Option 2
-        </label>
-        <label>
-          <input type="checkbox" value="Option 3"> Option 3
-        </label>
-      </div>  
-
-      <div class="filter-option">
-        <h4>Filter slot 3</h4>
-        <label>
-          <input type="checkbox" value="Option 1"> Option 1
-        </label>
-        <label>
-          <input type="checkbox" value="Option 2"> Option 2
-        </label>
-        <label>
-          <input type="checkbox" value="Option 3"> Option 3
-        </label>
-      </div>  
-
-      <div class="filter-option">
-        <h4>Filter slot 4</h4>
-        <label>
-          <input type="checkbox" value="Option 1"> Option 1
-        </label>
-        <label>
-          <input type="checkbox" value="Option 2"> Option 2
-        </label>
-        <label>
-          <input type="checkbox" value="Option 3"> Option 3
-        </label>
-      </div>  
+  <main>
+    <div class="main-page-text-box__b">
+      <h1>Escolha Peça</h1>
     </div>
-    <div class="products-list">
-      <table class="products-list">
-      <thead>
-        <tr>
-        <th>
-        Nome
-      </th>
-      <th>
-        Especificação 1
-      </th>
-      <th>
-        Especificação 2
-      </th>
-      <th>
-        Especificação 3
-      </th>
-      <th>
-        Especificação 4
-      </th>
-      <th>
-        Especificação 5
-      </th>
-      <th>
-        Especificação 6
-      </th>
-    </tr>
-    <tr class="product-row">
-      <td class="td-name"> 
-        <a href="#">
-          <div class="product-image-holder">
-            <div class="product-image-icon"> <img src="images\icons\parts_images_test\cbc52effd345bd5e9d66b5f7d198f8b4.1600.jpg"> </div>
+
+    
+
+    <section>
+      <div class="products-parts-container">
+        <div class="parts-holder-products">
+          <div class="products-list">
+            <table>
+              <thead>
+                <tr>
+                  <th>Nome</th>
+                  <th>Especificação 1</th>
+                  <th>Especificação 2</th>
+                  <th>Especificação 3</th>
+                  <th>Especificação 4</th>
+                  <th>Especificação 5</th>
+                  <th>Ação</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Produtos dinamicamente renderizados -->
+              </tbody>
+              
+            </table>
+            
           </div>
-          MSI B550 GAMING GEN3 ATX AM4 Motherboard
-        </a>
-      </td>
-      <td class="td-spec td_spec-1">
-        <h6 class="specLabel">AM5</h6>
-      </td>
-      <td class="td-spec td_spec-2">
-        <h6 class="specLabel">ATX</h6>
-      </td>
-      <td class="td-spec td_spec-3">
-        <h6 class="specLabel">192 GB</h6>
-      </td>
-      <td class="td-spec td_spec-4">
-        <h6 class="specLabel">4</h6>
-      </td>
-      <td class="td-spec td_spec-5">
-        <h6 class="specLabel">Black</h6>
-      </td>
-      <td class="button">
-        <button class="product-list-button-add">
-          Adicionar
-        </button>
-    </td>
-      
-   </tr>
-
-   <tr class="product-row">
-    <td class="td-name"> 
-      <a href="#">
-        <div class="product-image-holder">
-          <div class="product-image-icon"> <img src="images\icons\parts_images_test\cbc52effd345bd5e9d66b5f7d198f8b4.1600.jpg"> </div>
+          
         </div>
-        MSI B550 GAMING GEN3 ATX AM4 Motherboard
-      </a>
-    </td>
-    <td class="td-spec td_spec-1">
-      <h6 class="specLabel">AM5</h6>
-    </td>
-    <td class="td-spec td_spec-2">
-      <h6 class="specLabel">ATX</h6>
-    </td>
-    <td class="td-spec td_spec-3">
-      <h6 class="specLabel">192 GB</h6>
-    </td>
-    <td class="td-spec td_spec-4">
-      <h6 class="specLabel">4</h6>
-    </td>
-    <td class="td-spec td_spec-5">
-      <h6 class="specLabel">Black</h6>
-    </td>
-    <td class="button">
-      <button class="product-list-button-add">
-        Adicionar
-      </button>
-    </td>
- </tr>
-
- <tr class="product-row">
-  <td class="td-name"> 
-    <a href="#">
-      <div class="product-image-holder">
-        <div class="product-image-icon"> <img src="images\icons\parts_images_test\cbc52effd345bd5e9d66b5f7d198f8b4.1600.jpg"> </div>
+        
       </div>
-      MSI B550 GAMING GEN3 ATX AM4 Motherboard
-    </a>
-  </td>
-  <td class="td-spec td_spec-1">
-    <h6 class="specLabel">AM5</h6>
-  </td>
-  <td class="td-spec td_spec-2">
-    <h6 class="specLabel">ATX</h6>
-  </td>
-  <td class="td-spec td_spec-3">
-    <h6 class="specLabel">192 GB</h6>
-  </td>
-  <td class="td-spec td_spec-4">
-    <h6 class="specLabel">4</h6>
-  </td>
-  <td class="td-spec td_spec-5">
-    <h6 class="specLabel">Black</h6>
-  </td>
-  <td class="button">
-    <button class="product-list-button-add">
-      Adicionar
-    </button>
-  </td>
-  </tr>
+      <div class="pagination"></div>
+    </section>
 
-    </thead>
-    </table>
-  </div>
-</div>
+  </main>
 
-
-
-  </div>
-  
-</div>
-</section>
-</main>
-
-
-
+  <script src="scripts/Products.js"></script>
+  <script src="scripts/header.js" defer></script>
 
 </body>
 </html>

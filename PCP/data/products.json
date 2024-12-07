@@ -1,0 +1,98 @@
+[
+  {
+    "slug": "ryzen-5-5600x",
+    "name": "AMD Ryzen 5 5600X",
+    "category": "processadores",
+    "spec1": "AM4", 
+    "spec2": "65W", 
+    "image": "images/ryzen-5-5600x.jpg"
+  },
+  {
+    "slug": "core-i7-12700k",
+    "name": "Intel Core i7-12700K",
+    "category": "processadores",
+    "spec1": "LGA1700",
+    "spec2": "125W",
+    "image": "images/core-i7-12700k.jpg"
+  },
+  {
+    "slug": "asus-rog-b550",
+    "name": "ASUS ROG STRIX B550-F GAMING",
+    "category": "placas-mae",
+    "spec1": "AM4", 
+    "spec2": "DDR4",
+    "image": "images/asus-rog-b550.jpg"
+  },
+  {
+    "slug": "asus-z690",
+    "name": "ASUS Z690-A PRIME",
+    "category": "placas-mae",
+    "spec1": "LGA1700",
+    "spec2": "DDR5",
+    "image": "images/asus-z690.jpg"
+  },
+  {
+    "slug": "corsair-vengeance-ddr4",
+    "name": "Corsair Vengeance DDR4 16GB",
+    "category": "memorias-ram",
+    "spec1": "DDR4",
+    "spec2": "3200MHz",
+    "image": "images/corsair-vengeance-ddr4.jpg"
+  },
+  {
+    "slug": "kingston-fury-ddr5",
+    "name": "Kingston Fury DDR5 16GB",
+    "category": "memorias-ram",
+    "spec1": "DDR5",
+    "spec2": "4800MHz",
+    "image": "images/kingston-fury-ddr5.jpg"
+  },
+  {
+    "slug": "rtx-3060",
+    "name": "NVIDIA GeForce RTX 3060",
+    "category": "placa-de-video",
+    "spec1": "200W",
+    "spec2": "8GB GDDR6",
+    "image": "images/rtx-3060.jpg"
+  },
+  {
+    "slug": "rtx-4090",
+    "name": "NVIDIA GeForce RTX 4090",
+    "category": "placa-de-video",
+    "spec1": "450W",
+    "spec2": "24GB GDDR6X",
+    "image": "images/rtx-4090.jpg"
+  },
+  {
+    "slug": "samsung-970-evo",
+    "name": "Samsung 970 Evo NVMe SSD 1TB",
+    "category": "armazenamento",
+    "spec1": "5W",
+    "spec2": "NVMe",
+    "image": "images/samsung-970-evo.jpg"
+  },
+  {
+    "slug": "corsair-rm850x",
+    "name": "Corsair RM850x 850W",
+    "category": "fonte",
+    "spec1": "850W",
+    "spec2": "80 Plus Gold",
+    "image": "images/corsair-rm850x.jpg"
+  },
+  {
+    "slug": "cooler-master-hyper-212",
+    "name": "Cooler Master Hyper 212 RGB",
+    "category": "cooler",
+    "spec1": "5W",
+    "spec2": "AM4/LGA1700",
+    "image": "images/cooler-master-hyper-212.jpg"
+  },
+  {
+    "slug": "nzxt-h510",
+    "name": "NZXT H510 ATX Mid Tower",
+    "category": "gabinete",
+    "spec1": "ATX",
+    "spec2": "Black",
+    "image": "images/nzxt-h510.jpg"
+  }
+]

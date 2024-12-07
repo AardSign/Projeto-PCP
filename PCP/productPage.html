@@ -1,22 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Product name</title>
-
   <title>PC PICKER | Escolha suas partes</title>
-  <link rel="stylesheet" href="styles\buttons.css">
-  <link rel="stylesheet" href="styles\general.css">
-  <link rel="stylesheet" href="styles\header.css">
-  <link rel="stylesheet" href="styles\text.css">
-  <link rel="stylesheet" href="styles\navbar.css">
-  <link rel="stylesheet" href="styles\builder.css">
-  <link rel="stylesheet" href="styles\productPage.css">
+  <link rel="stylesheet" href="styles/buttons.css">
+  <link rel="stylesheet" href="styles/general.css">
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/text.css">
+  <link rel="stylesheet" href="styles/navbar.css">
+  <link rel="stylesheet" href="styles/builder.css">
+  <link rel="stylesheet" href="styles/productPage.css">
 </head>
 
-
 <body>
+
   <header class="header">
     <div class="left-section">
       <a href="index.html" class="holder-logo">
@@ -24,12 +22,16 @@
       </a>
     </div>
     <div class="middle-section">
-      <input class="search-bar" type="text" placeholder="Pesquisar">
+      <div div style="position: relative;">
+        <input class="search-bar" type="text" placeholder="Pesquisar">
+        <div class="search-results"></div>
+      </div>
       <button class="search-button">
         <img src="images/icons/search.svg">
       </button>
     </div>
-    <div class="right-section">
+    <div class="right-section" id="user-actions">
+      <!-- Este conteúdo será atualizado dinamicamente pelo script header.js -->
       <div class="login">
         <a href="login.html" class="login-button">
           <p>Login</p>
@@ -45,348 +47,69 @@
     </div>
   </header>
 
+
   <nav>
     <ul class="nav_links">
       <li class="button-border">
         <a href="builder.html">
-          <img src="images/icons/tool.svg" class="icon-nav-bar">Builder
+          <img src="images/icons/tool.svg" class="icon-nav-bar" alt="Builder">Builder
         </a>
       </li>
       <li class="button-border-p dropdown">
         <a href="#">
-          <img src="images/icons/cpu.svg" class="icon-nav-bar">Produtos
+          <img src="images/icons/cpu.svg" class="icon-nav-bar" alt="Produtos">Produtos
         </a>
         <ul class="dropdown-content">
-          <li><a href="products.html">Processadores <span class="icon-arrow">➔</span></a></li>
-          <li><a href="products.html">Placas de vídeo <span class="icon-arrow">➔</span></a></li>
-          <li><a href="products.html">Armazenamento <span class="icon-arrow">➔</span></a></li>
-          <li><a href="products.html">Placas-mãe <span class="icon-arrow">➔</span></a></li>
-          <li><a href="products.html">Gabinetes <span class="icon-arrow">➔</span></a></li>
-          <li><a href="products.html">Fontes <span class="icon-arrow">➔</span></a></li>
-          <li><a href="products.html">Memórias RAM <span class="icon-arrow">➔</span></a></li>
-          <li><a href="products.html">Coolers <span class="icon-arrow">➔</span></a></li>
-          <li><a href="products.html">Outros <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=cpus_detailed">Processadores <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=gpus_detailed">Placas de vídeo <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=storage_detailed">Armazenamento <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=motherboards_detailed">Placas-mãe <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=cases_detailed">Gabinetes <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=power_supplies_detailed">Fontes <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=memory_detailed">Memórias RAM <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=cpu_coolers_detailed">Coolers <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=outros">Outros <span class="icon-arrow">➔</span></a></li>
         </ul>
       </li>
       <li class="button-border-g">
         <a href="guide.html">
-          <img src="images/icons/file-text.svg" class="icon-nav-bar">Guia
+          <img src="images/icons/file-text.svg" class="icon-nav-bar" alt="Guia">Guia
         </a>
       </li>
     </ul>
   </nav>
 
-<main>
-  <section>
- <div class="main-page-text-box__b">
-    <a href> Placas-mãe </a>  
-  <h1>
-    MSI B550 GAMING GEN3 ATX AM4 Motherboard
-    </h1>
- </div>
-  <div class="background-product-page">
-    <div class="product-info-holder">
-      <div class="image-block"> 
-        <div class="image-info">
-        <img src="images\icons\parts_images_test\cbc52effd345bd5e9d66b5f7d198f8b4.1600.jpg" class="product-page-image">
+  <main class="background-product-page">
+    <!-- Bloco de Imagem -->
+    <div class="image-block">
+      <div class="image-info">
+        <img src="images/icons/default-product.png" class="product-page-image" alt="Imagem do Produto">
         <div class="add-to-favorite-btn">
-          <a href="#"> <img src="images\icons\plus.svg" class="plus-icon-image"> Adicionar aos favoritos</a>  
-        </div>      
+          <a href="#" class="add-to-favorites-link">
+            <img src="images/icons/plus.svg" class="plus-icon-image" alt="Adicionar aos favoritos">
+            Adicionar aos favoritos
+          </a>
+          <a class="add-builder-btn">
+            <img src="images/icons/tool.svg" class="hammer-icon-image">
+            Adicionar ao Builder
+          </a>
+        </div>
       </div>
     </div>
-   
-    </div>
+
+    <!-- Bloco de Especificações -->
     <div class="specs-holder">
       <div class="text-holder-specs">
         <h2>Especificações:</h2>
-        <div class="group-spec">
-          <h3 class="group-title">Fabricante</h3>
-          <div class="group-content">
-            <p>MSI</p>
-          </div>
+        <div class="specs-content">
+          <!-- Especificações serão preenchidas dinamicamente -->
         </div>
-        
-        <div class="group-spec">
-          <h3 class="group-title">Part #</h3>
-          <div class="group-content">
-            <ul>
-              <li>B550 GAMING GEN3</li>
-              <li>7B86-050R</li>
-              <li>911-7B86-050</li>
-            </ul>
-          </div>
-        </div>
-        
-        <div class="group-spec">
-          <h3 class="group-title">Socket/CPU</h3>
-          <div class="group-content">
-            <p>AM4</p>
-          </div>
-        </div>
-        
-        <div class="group-spec">
-          <h3 class="group-title">Formato</h3>
-          <div class="group-content">
-            <p>ATX</p>
-          </div>
-        </div>
-        
-        <div class="group-spec">
-          <h3 class="group-title">Chipset</h3>
-          <div class="group-content">
-            <p>AMD B550</p>
-          </div>
-        </div>
-        
-        <div class="group-spec">
-          <h3 class="group-title">Máximo de RAM</h3>
-          <div class="group-content">
-            <p>128 GB</p>
-          </div>
-        </div>
-        
-        <div class="group-spec">
-          <h3 class="group-title">Tipo de RAM</h3>
-          <div class="group-content">
-            <p>DDR4</p>
-          </div>
-        </div>
-        
-        <div class="group-spec">
-          <h3 class="group-title">Slots de RAM</h3>
-          <div class="group-content">
-            <p>4</p>
-          </div>
-        </div>
-        
-        <div class="group-spec">
-          <h3 class="group-title">Velocidade da RAM</h3>
-          <div class="group-content">
-            <ul>
-              <li>DDR4-1866</li>
-              <li>DDR4-2133</li>
-              <li>DDR4-2400</li>
-              <li>DDR4-2666</li>
-              <li>DDR4-2800</li>
-              <li>DDR4-2933</li>
-              <li>DDR4-3000</li>
-              <li>DDR4-3200</li>
-              <li>DDR4-3466</li>
-              <li>DDR4-3600</li>
-              <li>DDR4-3733</li>
-              <li>DDR4-3866</li>
-              <li>DDR4-4000</li>
-              <li>DDR4-4133</li>
-              <li>DDR4-4266</li>
-              <li>DDR4-4400</li>
-            </ul>
-          </div>
-        </div>
-        
-        <div class="group-spec">
-          <h3 class="group-title">Cor</h3>
-          <div class="group-content">
-            <p>Preto</p>
-          </div>
-        </div>
-        
-        <div class="group-spec">
-          <h3 class="group-title">SLI/CrossFire</h3>
-          <div class="group-content">
-            <p>CrossFire Capable</p>
-          </div>
-        </div>
-        
-        <div class="group-spec">
-          <h3 class="group-title">PCIe x16 Slots</h3>
-          <div class="group-content">
-            <p>2</p>
-          </div>
-        </div>
-        
-        <div class="group-spec">
-          <h3 class="group-title">PCIe x8 Slots</h3>
-          <div class="group-content">
-            <p>0</p>
-          </div>
-        </div>
-        
-        <div class="group-spec">
-          <h3 class="group-title">PCIe x4 Slots</h3>
-          <div class="group-content">
-            <p>0</p>
-          </div>
-        </div>
-        
-        <div class="group-spec">
-          <h3 class="group-title">PCIe x1 Slots</h3>
-          <div class="group-content">
-            <p>4</p>
-          </div>
-        </div>
-        
-        <div class="group-spec">
-          <h3 class="group-title">PCIe Slots</h3>
-          <div class="group-content">
-            <p>0</p>
-          </div>
-        </div>
-        
-        <div class="group-spec">
-          <h3 class="group-title">M.2 Slots</h3>
-          <div class="group-content">
-            <p>2260/2280/22110 M-key</p>
-          </div>
-        </div>
-        
-      </div>
-      <div class="specs-holder">
-        <div class="text-holder-specs">
-
-          
-          <div class="group-spec">
-            <h3 class="group-title">Mini-PCIe Slots</h3>
-            <div class="group-content">
-              <p>0</p>
-            </div>
-          </div>
-          
-          <div class="group-spec">
-            <h3 class="group-title">Half Mini-PCIe Slots</h3>
-            <div class="group-content">
-              <p>0</p>
-            </div>
-          </div>
-          
-          <div class="group-spec">
-            <h3 class="group-title">Mini-PCIe / mSATA Slots</h3>
-            <div class="group-content">
-              <p>0</p>
-            </div>
-          </div>
-          
-          <div class="group-spec">
-            <h3 class="group-title">mSATA Slots</h3>
-            <div class="group-content">
-              <p>0</p>
-            </div>
-          </div>
-          
-          <div class="group-spec">
-            <h3 class="group-title">SATA 6.0 Gb/s</h3>
-            <div class="group-content">
-              <p>6</p>
-            </div>
-          </div>
-          
-          <div class="group-spec">
-            <h3 class="group-title">Ethernet Integrada</h3>
-            <div class="group-content">
-              <p>1 x 1 Gb/s (Realtek RTL8111H)</p>
-            </div>
-          </div>
-          
-          <div class="group-spec">
-            <h3 class="group-title">Vídeo Integrado</h3>
-            <div class="group-content">
-              <p>Depende da CPU</p>
-            </div>
-          </div>
-          
-          <div class="group-spec">
-            <h3 class="group-title">Entradas USB 2.0</h3>
-            <div class="group-content">
-              <p>2</p>
-            </div>
-          </div>
-          
-          <div class="group-spec">
-            <h3 class="group-title">Entradas USB 2.0 (Single Port)</h3>
-            <div class="group-content">
-              <p>0</p>
-            </div>
-          </div>
-          
-          <div class="group-spec">
-            <h3 class="group-title">Entradas USB 3.2 Gen 1</h3>
-            <div class="group-content">
-              <p>1</p>
-            </div>
-          </div>
-          
-          <div class="group-spec">
-            <h3 class="group-title">Entradas USB 3.2 Gen 2</h3>
-            <div class="group-content">
-              <p>0</p>
-            </div>
-          </div>
-          
-          <div class="group-spec">
-            <h3 class="group-title">Entradas USB 3.2 Gen 2x2</h3>
-            <div class="group-content">
-              <p>0</p>
-            </div>
-          </div>
-          
-          <div class="group-spec">
-            <h3 class="group-title">Suporta ECC</h3>
-            <div class="group-content">
-              <p>Não</p>
-            </div>
-          </div>
-          
-          <div class="group-spec">
-            <h3 class="group-title">WI-FI</h3>
-            <div class="group-content">
-              <p>Não</p>
-            </div>
-          </div>
-          
-          <div class="group-spec">
-            <h3 class="group-title">Suporte para RAID</h3>
-            <div class="group-content">
-              <p>Sim</p>
-            </div>
-          </div>
-          
-          <div class="group-spec">
-            <h3 class="group-title">Usa Conectores Traseiros</h3>
-            <div class="group-content">
-              <p>Não</p>
-            </div>
-          </div>
-          
       </div>
     </div>
+  </main>
 
-    </div>
-  </div>
-</section>
-</main>
+  <script src="scripts/ProductPage.js"></script>
+  <script src="scripts/header.js" defer></script>
 
-  
-
-  <!--
-  <div class="group-spec">
-    <h3 class="group-title"> </h3>
-    <div class="group-content">
-      <p> </p>
-    </div>
-  </div>
-
-  <div class="group-spec">
-    <h3 class="group-title"> </h3>
-    <div class="group-content">
-      <ul>
-        <li>
-
-        </li>
-      </ul>
-    </div>
-  </div>
--->
-  
-
-
- </body>
+</body>
 </html>

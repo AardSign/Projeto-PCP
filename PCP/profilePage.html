@@ -19,12 +19,16 @@
       </a>
     </div>
     <div class="middle-section">
-      <input class="search-bar" type="text" placeholder="Pesquisar">
+      <div div style="position: relative;">
+        <input class="search-bar" type="text" placeholder="Pesquisar">
+        <div class="search-results"></div>
+      </div>
       <button class="search-button">
         <img src="images/icons/search.svg">
       </button>
     </div>
-    <div class="right-section">
+    <div class="right-section" id="user-actions">
+      <!-- Este conteúdo será atualizado dinamicamente pelo script header.js -->
       <div class="login">
         <a href="login.html" class="login-button">
           <p>Login</p>
@@ -52,15 +56,15 @@
           <img src="images/icons/cpu.svg" class="icon-nav-bar">Produtos
         </a>
         <ul class="dropdown-content">
-          <li><a href="products.html">Processadores <span class="icon-arrow">➔</span></a></li>
-          <li><a href="products.html">Placas de vídeo <span class="icon-arrow">➔</span></a></li>
-          <li><a href="products.html">Armazenamento <span class="icon-arrow">➔</span></a></li>
-          <li><a href="products.html">Placas-mãe <span class="icon-arrow">➔</span></a></li>
-          <li><a href="products.html">Gabinetes <span class="icon-arrow">➔</span></a></li>
-          <li><a href="products.html">Fontes <span class="icon-arrow">➔</span></a></li>
-          <li><a href="products.html">Memórias RAM <span class="icon-arrow">➔</span></a></li>
-          <li><a href="products.html">Coolers <span class="icon-arrow">➔</span></a></li>
-          <li><a href="products.html">Outros <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=cpus_detailed">Processadores <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=gpus_detailed">Placas de vídeo <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=storage_detailed">Armazenamento <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=motherboards_detailed">Placas-mãe <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=cases_detailed">Gabinetes <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=power_supplies_detailed">Fontes <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=memory_detailed">Memórias RAM <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=cpu_coolers_detailed">Coolers <span class="icon-arrow">➔</span></a></li>
+          <li><a href="products.html?category=outros">Outros <span class="icon-arrow">➔</span></a></li>
         </ul>
       </li>
       <li class="button-border-g">
@@ -72,52 +76,63 @@
   </nav>
 
  <main>
-  <div class="profile-page-text">
-  <h1>Perfil</h1>
- </div>
+  <div class="container">
+    <div id="conta" class="section">
+      <h2>Alterar informações da conta:</h2>
+      <form id="account-form">
+        <label for="name">Nome de Usuário:</label>
+        <input type="text" id="name" name="name" placeholder="Digite seu novo Nome de Usuário">
+  
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="Digite seu novo E-mail">
+  
+        <label for="password">Nova Senha:</label>
+        <input type="password" id="password" name="password" placeholder="Digite sua nova senha">
+  
+        <label for="confirm-password">Confirme a Nova Senha:</label>
+        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirme sua nova senha">
+  
+        <button type="submit" class="btn-btn-save">Salvar Alterações</button>
+        <button type="button" class="btn-btn-delete" onclick="deleteAccount()">Excluir Conta</button>
+      </form>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div id="builds-salvas" class="section">
+      <h2>Builds Salvas</h2>
+      <div id="builds-list">
+        <!-- As builds serão renderizadas dinamicamente aqui -->
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <!-- Modal para visualizar conteúdo da build -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 id="modal-title"></h2>
+      <div id="modal-body"></div>
+    </div>
+  </div>
 
- <div class="profile-username-link">
-  <a href="profilePage.html"><img src="images\icons\person.svg" class="profile-username-link-picture">User</a>
- </div>
+  <div class="container">
+    <div id="favoritos" class="section">
+      <h2>Partes Favoritas</h2>
+      <div class="favoritos-list">
+        <!-- Os favoritos serão renderizados dinamicamente aqui -->
+      </div>
+    </div>
+  </div>
+  
 
- <div>
-  <nav>
-    <ul class="nav_links">
-      <li class="button-border"><a href="#" onclick="carregarConteudo('conta')">Conta</a></li>
-      <li class="button-border"><a href="#" onclick="carregarConteudo('partes-favoritas')">Partes Favoritas</a></li>
-      <li class="button-border"><a href="#" onclick="carregarConteudo('builds-salvas')">Builds Salvas</a></li>
-    </ul>
-  </nav>
-</div>
-
-<div class="profile-page-text" id="conteudo">
-  <h1>Perfil</h1>
-  <p>Bem-vindo à sua página de perfil! Selecione uma opção na navegação para ver mais informações.</p>
-</div>
-
-
-<script>
-  function carregarConteudo(pagina) {
-    let conteudo = document.getElementById('conteudo');
-
-    switch (pagina) {
-      case 'conta':
-        conteudo.innerHTML = `<h1>Conta</h1><p>Gerencie suas informações da conta aqui.</p>`;
-        break;
-      case 'partes-favoritas':
-        conteudo.innerHTML = `<h1>Partes Favoritas</h1><p>Veja suas partes favoritas armazenadas.</p>`;
-        break;
-      case 'builds-salvas':
-        conteudo.innerHTML = `<h1>Builds Salvas</h1><p>Confira as builds que você salvou.</p>`;
-        break;
-      default:
-        conteudo.innerHTML = `<h1>Perfil</h1><p>Bem-vindo à sua página de perfil! Selecione uma opção na navegação para ver mais informações.</p>`;
-        break;
-    }
-  }
-</script>
+  
 </main>
 
+<script src="scripts/ProfilePage.js"></script>
+<script src="scripts/header.js" defer></script>
 
 </body>
 </html>
